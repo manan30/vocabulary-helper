@@ -1,7 +1,7 @@
 {
-  "name": "react-parcel-starter",
+  "name": "vocabulary-helper",
   "version": "1.0.0",
-  "description": "A starter repo for creating React applications using Parcel as the module bundler",
+  "description": "A vocabulary helper",
   "main": "index.js",
   "author": "Manan Joshi",
   "license": "MIT",
