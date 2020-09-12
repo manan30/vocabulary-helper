@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+@layer base {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
-  background-color: #fcfffc;
-  overflow: hidden;
-}
+    background-color: #fcfffc;
+    overflow: hidden;
+  }
 
-#root {
-  height: 100%;
-  width: 100%;
+  #root {
+    height: 100%;
+    width: 100%;
+  }
 }
