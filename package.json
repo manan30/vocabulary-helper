@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "parcel:help": "parcel help",
-    "start": "parcel public/index.html --port 1741",
+    "start": "parcel public/index.html --port 1741 --no-cache",
     "build": "parcel build public/index.html --no-source-maps",
     "lint": "eslint 'src/**/*.js'",
     "lint:fix": "eslint --fix 'src/**/*.js'",
@@ -30,6 +30,7 @@
     "tailwindcss": "1.8.8"
   },
   "dependencies": {
+    "@svgr/parcel-plugin-svgr": "5.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }

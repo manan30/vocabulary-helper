@@ -7,7 +7,11 @@ module.exports = {
   theme: {
     extend: {
       width: {
-        'base-width': 'calc(100% - 12rem)'
+        'base-width': 'calc(100% - 12rem)',
+        'c-24': '24rem'
+      },
+      height: {
+        'c-24': '24rem'
       }
     },
     screens: {
