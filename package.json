@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.11.2",
+    "@fullhuman/postcss-purgecss": "2.3.0",
     "@svgr/parcel-plugin-svgr": "5.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",

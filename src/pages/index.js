@@ -19,9 +19,9 @@ function Index() {
     refetch();
   }, [refetch]);
 
-  useEffect(() => {
-    console.log({ data, isError, isLoading });
-  }, [data, isError, isLoading]);
+  // useEffect(() => {
+  //   console.log({ data, isError, isLoading });
+  // }, [data, isError, isLoading]);
 
   // TODO: Handle error for submitting using enter
   // useEffect(() => {
