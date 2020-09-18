@@ -100,7 +100,7 @@ function Index() {
                         {lex.senses[0].definition}
                       </div>
                       {lex.synonymSets && (
-                        <div className='mt-2 flex flex-wrap'>
+                        <div className='mt-4 flex flex-wrap'>
                           {lex.synonymSets[0].synonyms.map((s) => (
                             <div className='rounded-lg bg-primary p-2 text-white font-medium text-c-xs mb-2 mr-2'>
                               {s}

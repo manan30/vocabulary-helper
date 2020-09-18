@@ -25,7 +25,7 @@ function Input({
     <label htmlFor={label} className='w-2/4 text-center'>
       <input
         id={label}
-        className={`bg-white border border-gray-500 rounded-lg p-2 block appearance-none leading-normal w-full focus:outline-none focus:shadow-outline`.concat(
+        className={`bg-white border border-gray-500 rounded-lg p-2 block appearance-none leading-normal w-full focus:outline-none focus:shadow-outline text-base`.concat(
           disabled ? ' cursor-not-allowed' : ''
         )}
         type={type || 'text'}
