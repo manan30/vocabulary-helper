@@ -5,8 +5,8 @@ export default async function getWordDetails(_, searchWord) {
     const res = await fetch(`${ENDPOINT}/${searchWord}`, {
       method: 'GET',
       headers: {
-        'x-rapidapi-host': 'lingua-robot.p.rapidapi.com',
-        'x-rapidapi-key': '15dc1a3dd8msh986c0071a2b216fp1b00ccjsn84f85d57d080'
+        'x-rapidapi-host': process.env.RAPIDAPI_HOST,
+        'x-rapidapi-key': process.env.RAPIDAPI_KEY
       }
     });
     const json = await res.json();

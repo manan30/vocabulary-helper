@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import WordSearchInput from '../components/input';
 import Svg from '../components/svg';
@@ -19,9 +19,9 @@ function Index() {
     refetch();
   }, [refetch]);
 
-  // useEffect(() => {
-  //   console.log({ data, isError, isLoading });
-  // }, [data, isError, isLoading]);
+  useEffect(() => {
+    console.log({ data, isError, isLoading });
+  }, [data, isError, isLoading]);
 
   // TODO: Handle error for submitting using enter
   // useEffect(() => {
@@ -63,14 +63,14 @@ function Index() {
           Search
         </button>
       </div>
-      {!data && (
+      {(!data || (data && !data.entries.length)) && (
         <div className='mt-12 h-48 w-48 sm:h-64 sm:w-64 md:h-c-24 md:w-c-24 lg:h-c-24 lg:w-c-24'>
           {!isLoading && !isError && !data && <Svg type='initial' />}
           {isLoading && <Svg type='loading' />}
-          {isError && <Svg type='error' />}
+          {(isError || (data && !data.entries.length)) && <Svg type='error' />}
         </div>
       )}
-      {data && (
+      {data && data.entries.length > 0 && (
         <div className='rounded-lg shadow p-6 w-4/5 md:w-1/2 lg:w-1/2 mt-12 overflow-y-auto h-auto max-h-c-main'>
           {data.entries.map(({ lexemes }, i) => {
             return (
