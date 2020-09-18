@@ -1,6 +1,7 @@
 import React from 'react';
 import ReadingSVG from '../assets/svg/reading.svg';
 import LoadingSVG from '../assets/svg/loading.svg';
+import ErrorSVG from '../assets/svg/error.svg';
 
 function Svg({ type }) {
   return (
@@ -10,6 +11,9 @@ function Svg({ type }) {
       )}
       {type === 'initial' && (
         <ReadingSVG className='h-full w-full transform scale-75' />
+      )}
+      {type === 'error' && (
+        <ErrorSVG className='h-full w-full transform scale-75' />
       )}
     </div>
   );
