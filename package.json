@@ -15,6 +15,8 @@
     "format:check": "prettier --check 'src/**/*.{js, css}'"
   },
   "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/plugin-transform-runtime": "7.11.5",
     "autoprefixer": "9.8.6",
     "eslint": "7.8.1",
     "eslint-config-airbnb": "18.2.0",
@@ -30,8 +32,11 @@
     "tailwindcss": "1.8.8"
   },
   "dependencies": {
+    "@babel/runtime": "7.11.2",
     "@svgr/parcel-plugin-svgr": "5.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-query": "2.17.0",
+    "react-query-devtools": "2.4.7"
   }
 }

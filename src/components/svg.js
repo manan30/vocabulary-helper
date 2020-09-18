@@ -1,10 +1,16 @@
 import React from 'react';
 import ReadingSVG from '../assets/svg/reading.svg';
+import LoadingSVG from '../assets/svg/loading.svg';
 
-function Svg() {
+function Svg({ type }) {
   return (
     <div className='grid place-items-center h-full w-full bg-gray-200 rounded-full'>
-      <ReadingSVG className='h-full w-full transform scale-75' />
+      {type === 'loading' && (
+        <LoadingSVG className='h-full w-full transform scale-75' />
+      )}
+      {type === 'initial' && (
+        <ReadingSVG className='h-full w-full transform scale-75' />
+      )}
     </div>
   );
 }

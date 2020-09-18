@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ReactQueryDevtools } from 'react-query-devtools';
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <>
+    <App />
+    <ReactQueryDevtools initialIsOpen />
+  </>,
+  document.getElementById('root')
+);
 
 /**
  * In Parcel, Hot Module Replacement(HMR) is disabled by default.

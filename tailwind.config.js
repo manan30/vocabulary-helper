@@ -12,6 +12,15 @@ module.exports = {
       },
       height: {
         'c-24': '24rem'
+      },
+      maxHeight: {
+        'c-main': 'calc(100% - 20rem)'
+      },
+      colors: {
+        primary: '#39b2ad'
+      },
+      fontSize: {
+        'c-xs': '0.25rem'
       }
     },
     screens: {
