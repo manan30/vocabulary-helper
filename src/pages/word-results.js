@@ -15,10 +15,6 @@ function WordResults() {
     }
   );
 
-  // useEffect(() => {
-  //   console.log({ data, isError, isLoading });
-  // }, [data, isError, isLoading]);
-
   if (!data || (data && !data.entries.length)) {
     return (
       <div className='flex justify-center'>

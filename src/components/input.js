@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
-function Input({
-  label,
-  type,
-  placeholder,
-  required,
-  ready,
-  callback,
-  disabled
-}) {
+function Input({ label, type, placeholder, required, callback, disabled }) {
   const [inputValue, setInputValue] = useState('');
   const [isFocused, setIsFocused] = useState(true);
 
@@ -18,8 +11,8 @@ function Input({
   };
 
   useEffect(() => {
-    if (!isFocused || ready) callback(inputValue);
-  }, [isFocused, callback, inputValue, ready]);
+    if (!isFocused) callback(inputValue);
+  }, [isFocused, callback, inputValue]);
 
   return (
     <label htmlFor={label} className='w-2/4 text-center'>
@@ -28,8 +21,8 @@ function Input({
         className={`bg-white border border-gray-500 rounded-lg p-2 block appearance-none leading-normal w-full focus:outline-none focus:shadow-outline text-base`.concat(
           disabled ? ' cursor-not-allowed' : ''
         )}
-        type={type || 'text'}
-        placeholder={placeholder || 'Enter text here'}
+        type={type}
+        placeholder={placeholder}
         required={required}
         value={inputValue}
         onChange={handleChange}
@@ -40,5 +33,23 @@ function Input({
     </label>
   );
 }
+
+Input.propTypes = {
+  label: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  required: PropTypes.bool,
+  callback: PropTypes.func,
+  disabled: PropTypes.bool
+};
+
+Input.defaultProps = {
+  label: '',
+  type: 'text',
+  placeholder: 'Enter text here',
+  required: true,
+  callback: () => {},
+  disabled: false
+};
 
 export default Input;

@@ -8,19 +8,6 @@ function Index() {
   const history = useHistory();
   const location = useLocation();
 
-  // useEffect(() => {
-  //   const enterKeyHandler = (e) => {
-  //     if (e.keyCode !== 13) return;
-  //     setReadyToSubmit(true);
-  //     handleSearch();
-  //     setReadyToSubmit(false);
-  //   };
-  //   document.addEventListener('keyup', enterKeyHandler);
-  //   return () => {
-  //     document.removeEventListener('keyup', enterKeyHandler);
-  //   };
-  // }, [handleSearch]);
-
   return (
     <div className='flex items-center flex-col'>
       <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center my-8 text-primary'>
@@ -38,9 +25,7 @@ function Index() {
         </div>
         <button
           type='button'
-          className={`ml-4 p-2 w-24 bg-primary rounded-lg text-white font-bold`.concat(
-            false ? ' cursor-not-allowed' : ''
-          )}
+          className='ml-4 p-2 w-24 bg-primary rounded-lg text-white font-bold'
           // disabled={isLoading}
           onClick={() => history.push(searchWord)}
         >

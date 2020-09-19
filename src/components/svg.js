@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReadingSVG from '../assets/svg/reading.svg';
 import LoadingSVG from '../assets/svg/loading.svg';
 import ErrorSVG from '../assets/svg/error.svg';
@@ -18,5 +19,13 @@ function Svg({ type }) {
     </div>
   );
 }
+
+Svg.propTypes = {
+  type: PropTypes.string
+};
+
+Svg.defaultProps = {
+  type: ''
+};
 
 export default Svg;
