@@ -2,7 +2,7 @@ const ENDPOINT = 'https://lingua-robot.p.rapidapi.com/language/v1/entries/en';
 
 export default async function getWordDetails(_, searchWord) {
   if (searchWord) {
-    const res = await fetch(`${ENDPOINT}/${searchWord}`, {
+    const res = await fetch(`${ENDPOINT}/${searchWord.trim().toLowerCase()}`, {
       method: 'GET',
       headers: {
         'x-rapidapi-host': process.env.RAPIDAPI_HOST,
