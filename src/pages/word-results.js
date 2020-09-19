@@ -68,14 +68,21 @@ function WordResults() {
                       </div>
                       {lex.synonymSets && (
                         <div className='mt-4 flex flex-wrap'>
-                          {lex.synonymSets[0].synonyms.map((s) => (
-                            <div
-                              className='rounded-lg bg-primary p-2 text-white font-medium text-c-xs mb-2 mr-2 cursor-pointer'
-                              onClick={() => history.push(s)}
-                            >
-                              {s}
-                            </div>
-                          ))}
+                          {lex.synonymSets[0].synonyms.map((s, k) => {
+                            const kdx = k;
+                            return (
+                              <div
+                                key={kdx}
+                                className='rounded-lg bg-primary p-2 text-white font-medium text-c-xs mb-2 mr-2 cursor-pointer'
+                                onClick={() => history.push(s)}
+                                onKeyUp={() => history.push(s)}
+                                role='button'
+                                tabIndex={-1}
+                              >
+                                {s}
+                              </div>
+                            );
+                          })}
                         </div>
                       )}
                     </div>

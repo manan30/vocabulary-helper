@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import WordSearchInput from '../components/input';
 import Svg from '../components/svg';
 
 function Index() {
   const [searchWord, setSearchWord] = useState('');
   const history = useHistory();
+  const location = useLocation();
 
   // useEffect(() => {
   //   const enterKeyHandler = (e) => {
@@ -46,7 +47,7 @@ function Index() {
           Search
         </button>
       </div>
-      {false && (
+      {location.pathname === '/' && (
         <div className='mt-12 h-48 w-48 sm:h-64 sm:w-64 md:h-c-24 md:w-c-24 lg:h-c-24 lg:w-c-24'>
           <Svg type='initial' />
         </div>

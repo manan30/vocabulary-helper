@@ -20,7 +20,7 @@ module.exports = {
         primary: '#39b2ad'
       },
       fontSize: {
-        'c-xs': '0.25rem'
+        'c-xs': '0.5rem'
       }
     },
     screens: {
